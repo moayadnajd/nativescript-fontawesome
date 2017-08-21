@@ -2,7 +2,7 @@
 
 ## A simpler way to use FontAwesome icons with NativeScript
 
-<img src="http://codeobia.com/screenshots/nativescript-fontawsome.png" width="400">
+<img src="http://codeobia.com/screenshots/nativescript-fontawsome.png" width="300">
 
 ## Install
 
