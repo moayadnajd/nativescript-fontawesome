@@ -2,23 +2,8 @@
 
 ## A simpler way to use FontAwesome icons with NativeScript
 
+![screenshot](https://github.com/moayadnajd/nativescript-fontawesome)
 
-* call the init function in the app.ts:
-
-```
-import * as application from 'application';
-import {TNSFontIcon, fonticon} from 'nativescript-fonticon';
-
-TNSFontIcon.debug = true; <-- Optional. Will output the css mapping to console.
-TNSFontIcon.paths = {
-  'fa': 'font-awesome.css',
-  'ion': 'ionicons.css'
-};
-TNSFontIcon.loadCss();
-
-application.resources['fonticon'] = fonticon;
-application.start({ moduleName: 'main-page' });
-```
 
 ## Install
 
