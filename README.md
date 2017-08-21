@@ -1,40 +1,50 @@
-# Your Plugin Name
+# Nativescript FontAwesome
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+## A simpler way to use FontAwesome icons with NativeScript
 
-Then describe what's the purpose of your plugin. 
 
-In case you develop UI plugin, this is where you can add some screenshots.
+* call the init function in the app.ts:
 
-## (Optional) Prerequisites / Requirements
+```
+import * as application from 'application';
+import {TNSFontIcon, fonticon} from 'nativescript-fonticon';
 
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+TNSFontIcon.debug = true; <-- Optional. Will output the css mapping to console.
+TNSFontIcon.paths = {
+  'fa': 'font-awesome.css',
+  'ion': 'ionicons.css'
+};
+TNSFontIcon.loadCss();
 
-## Installation
-
-Describe your plugin installation steps. Ideally it would be something like:
-
-```javascript
-tns plugin add <your-plugin-name>
+application.resources['fonticon'] = fonticon;
+application.start({ moduleName: 'main-page' });
 ```
 
-## Usage 
+## Install
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
+```
+tns plugin add nativescript-fontawesome
+```
 
-## API
+[click here to Download fontawesome-webfont.ttf](https://github.com/moayadnajd/nativescript-fontawesome)
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
-## License
+* Place font icon `.ttf` file in `app/fonts`, like below:
+  
+```
+app/fonts/fontawesome-webfont.ttf
+```
+* call the init function in the you'r  app.ts:
+```
+import { Fontawesome } from 'nativescript-fontawesome';
+Fontawesome.init();
 
-Apache License Version 2.0, January 2004
+```
+### Usage
+
+```
+<Label class="fa" text="{{'fa-bluetooth' | fontawesome }}"></Label> 
+``` 
+
+## Credits
+
+[nativescript-fonticon](https://github.com/NathanWalker/nativescript-fonticon)

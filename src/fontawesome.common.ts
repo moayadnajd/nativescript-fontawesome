@@ -1,28 +1,22 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import * as app from 'tns-core-modules/application';
-import * as dialogs from 'tns-core-modules/ui/dialogs';
 
-export class Common extends Observable {
-  public message: string;
-
-  constructor() {
-    super();
-    this.message = Utils.SUCCESS_MSG();
-  }
-
-  public greet() {
-    return "Hello, NS";
-  }
-}
-
-export class Utils {
-  public static SUCCESS_MSG(): string {
-    let msg = `Your plugin is working on ${app.android ? 'Android' : 'iOS'}.`;
-
-    setTimeout(() => {
-      dialogs.alert(`${msg} For real. It's really working :)`).then(() => console.log(`Dialog closed.`));
-    }, 2000);
-
-    return msg;
+import * as application from 'tns-core-modules/application';
+import { TNSFontIcon, fonticon } from 'nativescript-fonticon';
+export class Common {
+  public static init(): void {
+    try {
+      let resources = application.getResources();
+      if (typeof resources['fontawesome'] === 'undefined') {
+        TNSFontIcon.debug = false;
+        TNSFontIcon.paths = {
+          'fa': 'tns_modules/nativescript-fontawesome/font-awesome.css'
+        };
+        TNSFontIcon.loadCss();
+        resources['fontawesome'] = fonticon;
+      }
+      application.setResources(resources);
+    } catch (e) {
+      console.log(e);
+    }
   }
 }
+

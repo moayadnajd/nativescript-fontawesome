@@ -1,7 +1,7 @@
 {
     "name": "nativescript-fontawesome",
     "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
+    "description": "Your awesome NativeScript plugin for using fontawesome icons in nativescript",
     "main": "fontawesome",
     "typings": "index.d.ts",
     "nativescript": {
@@ -29,12 +29,18 @@
     "keywords": [
         "NativeScript",
         "JavaScript",
+        "fontawesome",
+        "font",
+        "awesome",
+        "codeobia",
+        "moayad",
+        "najdawi",
         "Android",
         "iOS"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "Moayad Najdawi",
+        "email": "moayad@codeobia.com"
     },
     "bugs": {
         "url": "https://github.com/moayadnajd/nativescript-fontawesome/issues"
@@ -53,6 +59,8 @@
         "rimraf": "^2.5.0",
         "tslint": "^5.0.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "nativescript-fonticon":"1.1.1"
+    },
     "bootstrapper": "nativescript-plugin-seed"
 }

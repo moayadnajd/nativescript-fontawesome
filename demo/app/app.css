@@ -1,1 +1,6 @@
 ﻿@import 'nativescript-theme-core/css/core.light.css';
+.fa {
+    font-size: 55;
+    color: green;
+    horizontal-align: center;
+}

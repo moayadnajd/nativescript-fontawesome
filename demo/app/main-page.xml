@@ -1,6 +1,18 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
   xmlns:ui="nativescript-fontawesome">
   <StackLayout class="p-20">
-    <Label text="{{ message }}" class="t-20 text-center c-black" textWrap="true"/>
+    
+    <Label class="fa" text="{{'fa-bluetooth' | fontawesome }}"></Label>
+
+    <Label class="fa" text="{{'fa-home' | fontawesome }}"></Label>
+
+    <Label class="fa" text="{{'fa-car' | fontawesome }}"></Label>
+
+    <Label class="fa" text="{{'fa-book' | fontawesome }}"></Label>
+
+    <Label class="fa" text="{{'fa-bell' | fontawesome }}"></Label>
+
+    <Label class="fa" text="{{'fa-cc' | fontawesome }}"></Label>
+
   </StackLayout>
 </Page>
