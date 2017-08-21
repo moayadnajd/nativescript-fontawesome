@@ -1,7 +1,7 @@
 {
     "name": "nativescript-fontawesome",
     "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin for using fontawesome icons in nativescript",
+    "description": "Your awesome NativeScript plugin for using fontawesome icons",
     "main": "fontawesome",
     "typings": "index.d.ts",
     "nativescript": {
